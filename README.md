@@ -11,3 +11,4 @@ User can: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The site takes user input of the amount, either as an expense or added allowance. <br/>
 Then updates the log text area with the transaction, along with the current date.
   
+  ***Currently front-end only (no back-end implementation)
