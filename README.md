@@ -1,4 +1,4 @@
-<a href="https://mrshanx.github.io/AllowanceTrackerWeb/"><em><strong>Check out project</strong></em></a>
+<a href="https://mrshanx.github.io/allowance-tracker-web"><em><strong>Check out project</strong></em></a>
 
 # Allowance-Tracker-Web-
 A web application version for tracking allowance $$$. <br/>
