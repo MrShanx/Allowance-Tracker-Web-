@@ -1,14 +1,55 @@
-# Allowance-Tracker-Web-
-A web application version for tracking allowance $$$. <br/>
-<i>Web Technology: <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          HTML5, CSS, Javascript </i> <br/> <br/>
-          
-A website application that allows the user to store transactions on the web. <br/> <br/>
-User can: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  1) Add expenses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  2) Add allowance <br/> <br/>
-  
-The site takes user input of the amount, either as an expense or added allowance. <br/>
-Then updates the log text area with the transaction, along with the current date.<br><br><br>
-  
-  <strong><em>***Currently front-end only (no back-end implementation)</em></strong>
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Allowance</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- style sheet goes here -->
+        <link rel="stylesheet" type="text/css" href="../sheets/mainpage_stylesheet.css">
+        
+        <!-- scripts here -->
+        <script src="../scripts/mainpage_script.js">
+        </script>
+    </head>
+    <body onLoad="funcInitPage()">
+        <div id="page">
+            <div id="top">
+                <h1>Allowance remaining:</h1>
+                    <form onsubmit="return false">
+                        <input type="text" id="allowance_out" value="Add Allowance" readonly>                         
+                    </form>
+            </div>
+            <div id="bottom">
+                <form name="bottom_form" id="bottom_form" onsubmit="return false">
+                Expense:
+                    <input type="number" id="expense_in" value="" step="0.25" min="0.00" max="99999"
+                           onkeydown="if(event.keyCode === 13) {
+                                            document.getElementById('subtract_button').click();
+                                    }"
+                                     autofocus>
+                <br/>
+                    <textarea name="expense_log" id="expense_log" form="bottom_form" readonly></textarea><br/>                                   
+                    <input type="button" id="add_button" onClick="add()" value="Add Allowance">
+                    <input type="button" id="subtract_button" onClick="subtract()" value="Add Expense">                
+            <br/> 
+                <input type="button" id="res_button" onClick="res()" value="Reset">
+                </form>                
+            </div>
+            <div id="footer">
+                <p>Copyright &copy; 
+                    <script type="text/javascript">
+                        var d = new Date();
+                        document.write(d.getFullYear());
+                    </script>
+                    <a href="https://www.linkedin.com/in/emmanueltalan" target="_blank">[emmanuel talan]</a></p>
+            </div>
+        </div>
+    </body>
+</html>
